@@ -17,7 +17,15 @@ import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 @NgModule({
 	declarations: [ AppComponent ],
 	entryComponents: [],
-	imports: [ BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, IonicStorageModule.forRoot() ],
+	imports: [
+		BrowserModule,
+		IonicModule.forRoot(),
+		AppRoutingModule,
+		HttpClientModule,
+		IonicStorageModule.forRoot({
+			name: 'rsw.NewsAppDB'
+		})
+	],
 	providers: [
 		StatusBar,
 		SplashScreen,
